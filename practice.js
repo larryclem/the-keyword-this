@@ -5,7 +5,10 @@
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
-      //Answer 1. implicit binding 2. explicit binding (call, bind, apply) 3 . new binding 4. default binding
+      //Answer 1. implicit binding (blank dot blank)
+      //2. explicit binding (call, bind, apply) 
+      //3 . new binding when a function is invoked with a new keyword, the 'this' insided that function receives the value of new Object being created by function.
+      //4. default binding - bound the window
 
   // 3) What is the difference between call and apply?
 
@@ -80,6 +83,9 @@ var getYear = function(){
 getYear.call(prius);
 getYear.call(mustang);
 
+//or
+getYear.bind(mustang)();
+
 //New Problem
 
 
@@ -105,6 +111,6 @@ setTimeout(getMyUsername.bind(myUser), 5000);
 
 
 
-  //Answer Here - the window
+  //Answer Here - the window (when broken). bound to myUser once fixed.
 
 //Fix the setTimeout invocation so that the user object will be the focal object when getUsername is ran.
